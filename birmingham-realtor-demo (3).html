@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================
+     SEO  (edit per page when you split this into multiple pages)
+     ============================================================ -->
+<title>Cynthia Sheffield | Birmingham, AL Real Estate Agent — Buy & Sell Homes</title>
+<meta name="description" content="Cynthia Sheffield is a Birmingham, Alabama REALTOR® helping buyers, sellers, and families across Homewood, Mountain Brook, Vestavia Hills, Hoover, and Trussville. Local expertise, honest guidance. Call (205) 555-0142." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.example.com/" />
+
+<!-- Open Graph / social sharing -->
+<meta property="og:title" content="Cynthia Sheffield | Birmingham, AL Real Estate" />
+<meta property="og:description" content="Honest, local real estate guidance across the Birmingham metro. Buying, selling, and relocating made simple." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.example.com/share-image.jpg" />
+
+<!-- Local SEO structured data (verify details with the agent/broker) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Cynthia Sheffield",
+  "image": "https://www.example.com/headshot.jpg",
+  "telephone": "+1-205-555-0142",
+  "email": "csheffield32@yahoo.com",
+  "areaServed": ["Birmingham AL","Homewood AL","Mountain Brook AL","Vestavia Hills AL","Hoover AL","Trussville AL"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Birmingham",
+    "addressRegion": "AL",
+    "addressCountry": "US"
+  },
+  "memberOf": { "@type": "Organization", "name": "[BROKERAGE NAME], REALTORS®" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   DESIGN TOKENS  — change brand colors here, applies site-wide
+   ============================================================ */
+:root{
+  --ink:#22251f;          /* primary text */
+  --ink-soft:#54584d;     /* secondary text */
+  --cream:#f7f2e9;        /* page background */
+  --cream-2:#efe7d8;      /* alt section bg */
+  --paper:#fffdf8;        /* cards */
+  --pine:#1f3a2e;         /* deep heritage green */
+  --pine-2:#2c5341;       /* lighter green */
+  --brass:#b0884a;        /* antique gold accent */
+  --brass-soft:#cdab6e;
+  --line:rgba(34,37,31,.12);
+  --shadow:0 18px 50px -22px rgba(31,58,46,.45);
+  --shadow-sm:0 8px 24px -14px rgba(31,58,46,.4);
+  --r:16px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.21,.61,.35,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Hanken Grotesk",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--brass)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.97rem;
+  padding:.92em 1.55em;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn--solid{background:var(--pine);color:var(--cream);box-shadow:var(--shadow-sm)}
+.btn--solid:hover{background:var(--pine-2)}
+.btn--brass{background:var(--brass);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--brass:hover{background:var(--brass-soft)}
+.btn--ghost{border-color:var(--pine);color:var(--pine);background:transparent}
+.btn--ghost:hover{background:var(--pine);color:var(--cream)}
+.btn--light{background:var(--cream);color:var(--pine)}
+
+/* ============================ HEADER ============================ */
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s,box-shadow .35s,padding .35s}
+header.scrolled{background:rgba(247,242,233,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+header.scrolled .nav{padding:12px 0}
+.brand{font-family:"Fraunces",serif;font-size:1.42rem;font-weight:600;color:var(--pine);letter-spacing:-.02em;line-height:1}
+.brand span{display:block;font-family:"Hanken Grotesk";font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a.link{font-size:.95rem;font-weight:500;color:var(--ink);position:relative;padding:4px 0}
+.nav-links a.link::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--brass);transition:width .3s var(--ease)}
+.nav-links a.link:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--pine);transition:.3s}
+
+/* ============================ HERO ============================ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;
+  background:
+    radial-gradient(120% 90% at 80% 0%,rgba(176,136,74,.18),transparent 55%),
+    linear-gradient(160deg,#22402f 0%,#1c3527 45%,#16291f 100%);
+  color:var(--cream);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 39h40M39 0v40' stroke='%23ffffff' stroke-opacity='0.04'/%3E%3C/svg%3E")}
+.hero::after{content:"";position:absolute;right:-10%;bottom:-15%;width:60vw;height:60vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(176,136,74,.16),transparent 65%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.5rem);font-weight:500;max-width:13ch}
+.hero h1 em{font-style:italic;color:var(--brass-soft)}
+.hero p.sub{font-size:1.18rem;color:rgba(247,242,233,.82);max-width:46ch;margin:24px 0 34px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{background:rgba(255,253,248,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);
+  padding:28px;backdrop-filter:blur(6px)}
+.hero-card .photo{aspect-ratio:4/5;border-radius:12px;margin-bottom:18px;
+  background:linear-gradient(150deg,#dcae6a,#9c7637);position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center}
+.hero-card .photo span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);
+  padding:10px;background:rgba(0,0,0,.18);width:100%;text-align:center}
+.hero-card h3{font-size:1.3rem;color:var(--cream)}
+.hero-card p{font-size:.92rem;color:rgba(247,242,233,.75);margin-top:6px}
+
+/* trust strip */
+.trust{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.12);margin-top:46px;padding-top:26px;
+  display:flex;flex-wrap:wrap;gap:36px}
+.trust .item{display:flex;flex-direction:column}
+.trust .num{font-family:"Fraunces",serif;font-size:1.9rem;color:var(--brass-soft);line-height:1}
+.trust .lbl{font-size:.82rem;color:rgba(247,242,233,.72);margin-top:4px}
+
+/* ============================ SECTION SHELL ============================ */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:14px 0 16px}
+.sec-head p{color:var(--ink-soft);font-size:1.08rem}
+.alt-bg{background:var(--cream-2)}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================ ABOUT ============================ */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.about-photo{aspect-ratio:4/5;border-radius:var(--r);box-shadow:var(--shadow);position:relative;overflow:hidden;
+  background:linear-gradient(155deg,#2c5341,#1f3a2e);display:flex;align-items:flex-end;justify-content:center}
+.about-photo span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8);
+  padding:14px;background:rgba(0,0,0,.2);width:100%;text-align:center}
+.about-grid h2{font-size:clamp(2rem,3.6vw,2.8rem);margin:14px 0 18px}
+.about-grid p{color:var(--ink-soft);margin-bottom:16px;font-size:1.06rem}
+.sign{font-family:"Fraunces",serif;font-style:italic;font-size:1.5rem;color:var(--pine);margin-top:8px}
+
+/* ============================ PATHS (buy/sell) ============================ */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.path{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:40px;
+  box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.path:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.path .icon{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:var(--cream-2);
+  color:var(--pine);margin-bottom:20px}
+.path h3{font-size:1.65rem;margin-bottom:10px}
+.path p{color:var(--ink-soft);margin-bottom:18px}
+.path ul{list-style:none;margin-bottom:26px}
+.path li{padding:8px 0 8px 28px;position:relative;color:var(--ink-soft);border-bottom:1px solid var(--line)}
+.path li:last-child{border:0}
+.path li::before{content:"";position:absolute;left:0;top:16px;width:14px;height:8px;border-left:2px solid var(--brass);
+  border-bottom:2px solid var(--brass);transform:rotate(-45deg)}
+
+/* ============================ LISTINGS ============================ */
+.listings{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);
+  border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .img{aspect-ratio:3/2;position:relative;display:flex;align-items:flex-start;justify-content:space-between;padding:14px}
+.card:nth-child(1) .img{background:linear-gradient(150deg,#3a6450,#22402f)}
+.card:nth-child(2) .img{background:linear-gradient(150deg,#c8a463,#9c7637)}
+.card:nth-child(3) .img{background:linear-gradient(150deg,#4a6f5b,#2c5341)}
+.card:nth-child(4) .img{background:linear-gradient(150deg,#b88f54,#86663a)}
+.card:nth-child(5) .img{background:linear-gradient(150deg,#33594492,#1f3a2e)}
+.card:nth-child(6) .img{background:linear-gradient(150deg,#caa867,#a07f44)}
+.tag{font-size:.72rem;font-weight:600;letter-spacing:.04em;background:rgba(255,253,248,.95);color:var(--pine);
+  padding:6px 12px;border-radius:999px}
+.tag.sold{background:var(--pine);color:var(--cream)}
+.img .ph{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);align-self:flex-end}
+.card .body{padding:22px 22px 26px}
+.card .price{font-family:"Fraunces",serif;font-size:1.55rem;color:var(--pine)}
+.card .addr{font-weight:600;margin:4px 0 2px}
+.card .hood{color:var(--ink-soft);font-size:.92rem}
+.card .specs{display:flex;gap:18px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:.88rem;color:var(--ink-soft)}
+.card .specs b{color:var(--ink);font-weight:600}
+.listings-foot{text-align:center;margin-top:44px}
+
+/* ============================ COMMUNITIES ============================ */
+.communities{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hood-card{position:relative;border-radius:var(--r);overflow:hidden;min-height:230px;display:flex;align-items:flex-end;
+  padding:24px;color:#fff;box-shadow:var(--shadow-sm);transition:transform .35s var(--ease)}
+.hood-card:hover{transform:translateY(-5px)}
+.hood-card::before{content:"";position:absolute;inset:0;z-index:0}
+.hood-card:nth-child(1)::before{background:linear-gradient(180deg,rgba(31,58,46,.15),rgba(31,58,46,.85)),linear-gradient(140deg,#3a6450,#1f3a2e)}
+.hood-card:nth-child(2)::before{background:linear-gradient(180deg,rgba(31,58,46,.15),rgba(31,58,46,.85)),linear-gradient(140deg,#b88f54,#7d5f33)}
+.hood-card:nth-child(3)::before{background:linear-gradient(180deg,rgba(31,58,46,.15),rgba(31,58,46,.85)),linear-gradient(140deg,#4a6f5b,#243f31)}
+.hood-card:nth-child(4)::before{background:linear-gradient(180deg,rgba(31,58,46,.15),rgba(31,58,46,.85)),linear-gradient(140deg,#caa867,#8a6c39)}
+.hood-card:nth-child(5)::before{background:linear-gradient(180deg,rgba(31,58,46,.15),rgba(31,58,46,.85)),linear-gradient(140deg,#3a6450,#22402f)}
+.hood-card:nth-child(6)::before{background:linear-gradient(180deg,rgba(31,58,46,.15),rgba(31,58,46,.85)),linear-gradient(140deg,#bb934f,#6f5630)}
+.hood-card .c{position:relative;z-index:1}
+.hood-card h3{font-size:1.55rem}
+.hood-card p{font-size:.9rem;color:rgba(255,255,255,.82);margin-top:4px}
+
+/* ============================ TESTIMONIALS ============================ */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:34px;box-shadow:var(--shadow-sm)}
+.stars{color:var(--brass);letter-spacing:3px;font-size:1.05rem;margin-bottom:14px}
+.quote p{font-size:1.05rem;color:var(--ink);margin-bottom:20px}
+.quote .who{display:flex;align-items:center;gap:12px}
+.quote .who .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,#cdab6e,#9c7637);flex:none}
+.quote .who b{display:block;font-size:.95rem}
+.quote .who small{color:var(--ink-soft)}
+
+/* ============================ CTA BANNER ============================ */
+.cta-band{background:linear-gradient(150deg,#22402f,#16291f);color:var(--cream);text-align:center;border-radius:24px;
+  padding:64px 28px;position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;left:-10%;top:-40%;width:50vw;height:50vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(176,136,74,.18),transparent 60%)}
+.cta-band h2{font-size:clamp(2rem,4vw,3rem);position:relative;max-width:18ch;margin:0 auto 14px}
+.cta-band p{position:relative;color:rgba(247,242,233,.82);max-width:48ch;margin:0 auto 30px;font-size:1.08rem}
+.cta-band .hero-ctas{position:relative;justify-content:center}
+
+/* ============================ CONTACT ============================ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:54px;align-items:start}
+.contact-info h2{font-size:clamp(2rem,3.6vw,2.8rem);margin:14px 0 16px}
+.contact-info p{color:var(--ink-soft);font-size:1.06rem;margin-bottom:28px}
+.contact-line{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.contact-line .ic{width:44px;height:44px;border-radius:12px;background:var(--cream-2);display:grid;place-items:center;color:var(--pine);flex:none}
+.contact-line b{display:block}
+.contact-line small{color:var(--ink-soft)}
+.form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:.85em 1em;border:1.5px solid var(--line);border-radius:11px;
+  font-family:inherit;font-size:.97rem;background:var(--cream);color:var(--ink);transition:border .25s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass)}
+.field textarea{resize:vertical;min-height:96px}
+.form .btn{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:.78rem;color:var(--ink-soft);text-align:center;margin-top:12px}
+.form-success{display:none;text-align:center;padding:20px;background:var(--cream-2);border-radius:11px;color:var(--pine);font-weight:600}
+
+/* ============================ FOOTER ============================ */
+footer{background:#161d18;color:rgba(247,242,233,.72);padding:64px 0 30px;font-size:.92rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer .brand{color:var(--cream)}
+footer h4{color:var(--cream);font-family:"Hanken Grotesk";font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+footer a{display:block;padding:5px 0;color:rgba(247,242,233,.72);transition:color .2s}
+footer a:hover{color:var(--brass-soft)}
+.foot-legal{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;font-size:.8rem;color:rgba(247,242,233,.55)}
+.eho{display:flex;align-items:center;gap:10px;margin-top:14px}
+.eho .box{width:34px;height:34px;border:1.5px solid rgba(247,242,233,.5);border-radius:5px;display:grid;place-items:center;flex:none}
+.disclaimer{font-size:.74rem;color:rgba(247,242,233,.45);max-width:80ch;margin-top:18px;line-height:1.6}
+
+/* ============================ MOBILE ============================ */
+@media(max-width:960px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .hero-card{max-width:420px}
+  .listings,.communities,.quotes{grid-template-columns:1fr 1fr}
+  .paths{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{padding:0 20px}
+  section{padding:70px 0}
+  .nav-links{position:fixed;inset:0 0 0 30%;background:var(--pine);flex-direction:column;justify-content:center;
+    gap:28px;padding:40px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:55}
+  .nav-links.open{transform:none}
+  .nav-links a.link{color:var(--cream);font-size:1.15rem}
+  .nav-links .btn{color:var(--cream);border-color:var(--cream)}
+  .burger{display:flex;z-index:60}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:var(--cream)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:var(--cream)}
+  .nav-cta .btn{display:none}
+  .listings,.communities,.quotes,.foot-grid,.form .row{grid-template-columns:1fr}
+  .trust{gap:24px}
+  .trust .item{flex:1 1 40%}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ HEADER ============================ -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#home" class="brand">Cynthia&nbsp;Sheffield<span>Birmingham Real Estate</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#buy">Buy</a>
+      <a class="link" href="#sell">Sell</a>
+      <a class="link" href="#listings">Listings</a>
+      <a class="link" href="#communities">Communities</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn btn--ghost" href="tel:+12055550142">Call (205) 555-0142</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--solid" href="#contact">Let's Talk</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Serving Greater Birmingham, Alabama</span>
+        <h1>Real estate that feels like <em>home</em>, start to finish.</h1>
+        <p class="sub">Whether you're putting down roots in Homewood, upsizing in Vestavia, or selling the place you raised a family in — you deserve an agent who knows these streets and treats your move like it matters.</p>
+        <div class="hero-ctas">
+          <a class="btn btn--brass" href="#listings">Find a Home</a>
+          <a class="btn btn--light" href="#sell">What's My Home Worth?</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="photo"><span>Replace with agent headshot</span></div>
+        <h3>Hi, I'm Cynthia.</h3>
+        <p>Born-and-raised Birmingham REALTOR® with a simple promise: straight answers, real availability, and your interests first.</p>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="item"><span class="num">150+</span><span class="lbl">Local families served</span></div>
+      <div class="item"><span class="num">12 yrs</span><span class="lbl">In the Birmingham market</span></div>
+      <div class="item"><span class="num">4.9★</span><span class="lbl">Average client rating</span></div>
+      <div class="item"><span class="num">98%</span><span class="lbl">Of list price, on average</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal"><span>Replace with lifestyle / agent photo</span></div>
+    <div class="reveal">
+      <span class="eyebrow">Meet Your Agent</span>
+      <h2>A Birmingham neighbor who happens to be great at real estate.</h2>
+      <p>I grew up here, raised my own family here, and I still get a little thrilled handing someone the keys to a home in a neighborhood I love. After more than a decade helping people buy and sell across the metro, I've learned that the best deals come from listening first — to your budget, your timeline, and the life you're trying to build.</p>
+      <p>You'll never feel rushed, talked down to, or handed off to an assistant. When you call, you get me. When questions come up at 9pm before an offer is due, I answer. That's the difference between a transaction and a relationship — and I'm here for the relationship.</p>
+      <p class="sign">— Cynthia</p>
+      <div class="hero-ctas" style="margin-top:26px">
+        <a class="btn btn--solid" href="#contact">Book a Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BUY / SELL PATHS ============================ -->
+<section class="alt-bg" id="buy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How I Can Help</span>
+      <h2>Two paths, one trusted guide.</h2>
+      <p>Buying or selling, the goal is the same — to make a big decision feel clear, calm, and genuinely yours.</p>
+    </div>
+    <div class="paths">
+      <div class="path reveal">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>I'm Buying</h3>
+        <p>From your first showing to closing day, I'll help you find the right home at the right price — without the pressure.</p>
+        <ul>
+          <li>Honest guidance for first-time buyers</li>
+          <li>Off-market and just-listed home alerts</li>
+          <li>Trusted lenders, inspectors & contractors</li>
+          <li>Sharp negotiation on your behalf</li>
+        </ul>
+        <a class="btn btn--solid" href="#contact">Start Your Home Search</a>
+      </div>
+      <div class="path reveal" id="sell">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        </div>
+        <h3>I'm Selling</h3>
+        <p>A modern marketing plan, accurate pricing, and a smooth process designed to get you top dollar with less stress.</p>
+        <ul>
+          <li>Free, no-pressure home valuation</li>
+          <li>Professional photography & staging advice</li>
+          <li>Targeted local & online marketing</li>
+          <li>Clear communication at every step</li>
+        </ul>
+        <a class="btn btn--brass" href="#contact">Get My Home's Value</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FEATURED LISTINGS ============================ -->
+<section id="listings">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Featured Listings</span>
+      <h2>A look at homes across the metro.</h2>
+      <p>Sample listings shown — connect your MLS/IDX feed to display live inventory automatically.</p>
+    </div>
+    <div class="listings">
+      <div class="card reveal">
+        <div class="img"><span class="tag">For Sale</span><span class="ph">Listing Photo</span></div>
+        <div class="body">
+          <div class="price">$485,000</div>
+          <div class="addr">1428 Saulter Road</div>
+          <div class="hood">Homewood, AL 35209</div>
+          <div class="specs"><span><b>4</b> Beds</span><span><b>3</b> Baths</span><span><b>2,640</b> Sq Ft</span></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="img"><span class="tag">For Sale</span><span class="ph">Listing Photo</span></div>
+        <div class="body">
+          <div class="price">$929,000</div>
+          <div class="addr">3201 Overbrook Road</div>
+          <div class="hood">Mountain Brook, AL 35223</div>
+          <div class="specs"><span><b>5</b> Beds</span><span><b>4</b> Baths</span><span><b>3,910</b> Sq Ft</span></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="img"><span class="tag">New</span><span class="ph">Listing Photo</span></div>
+        <div class="body">
+          <div class="price">$372,500</div>
+          <div class="addr">505 Tyler Circle</div>
+          <div class="hood">Vestavia Hills, AL 35216</div>
+          <div class="specs"><span><b>3</b> Beds</span><span><b>2</b> Baths</span><span><b>1,980</b> Sq Ft</span></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="img"><span class="tag">For Sale</span><span class="ph">Listing Photo</span></div>
+        <div class="body">
+          <div class="price">$415,000</div>
+          <div class="addr">2117 Lake Cyrus Blvd</div>
+          <div class="hood">Hoover, AL 35244</div>
+          <div class="specs"><span><b>4</b> Beds</span><span><b>3</b> Baths</span><span><b>2,510</b> Sq Ft</span></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="img"><span class="tag sold">Sold</span><span class="ph">Listing Photo</span></div>
+        <div class="body">
+          <div class="price">$298,000</div>
+          <div class="addr">740 Magnolia Place</div>
+          <div class="hood">Trussville, AL 35173</div>
+          <div class="specs"><span><b>3</b> Beds</span><span><b>2</b> Baths</span><span><b>1,760</b> Sq Ft</span></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="img"><span class="tag">For Sale</span><span class="ph">Listing Photo</span></div>
+        <div class="body">
+          <div class="price">$549,000</div>
+          <div class="addr">88 Forest Park Circle</div>
+          <div class="hood">Forest Park, Birmingham 35209</div>
+          <div class="specs"><span><b>4</b> Beds</span><span><b>3</b> Baths</span><span><b>2,820</b> Sq Ft</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="listings-foot reveal">
+      <a class="btn btn--solid" href="#contact">See All Available Homes</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMMUNITIES ============================ -->
+<section class="alt-bg" id="communities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Areas I Serve</span>
+      <h2>Birmingham isn't one place — it's many.</h2>
+      <p>Each community has its own feel, schools, and price points. Here's where I help clients buy and sell every week.</p>
+    </div>
+    <div class="communities">
+      <div class="hood-card reveal"><div class="c"><h3>Homewood</h3><p>Walkable, charming, family-and-foodie favorite minutes from downtown.</p></div></div>
+      <div class="hood-card reveal"><div class="c"><h3>Mountain Brook</h3><p>Birmingham's premier address — elegant homes and top-tier schools.</p></div></div>
+      <div class="hood-card reveal"><div class="c"><h3>Vestavia Hills</h3><p>Established neighborhoods, standout schools, strong long-term value.</p></div></div>
+      <div class="hood-card reveal"><div class="c"><h3>Hoover</h3><p>New construction, amenities, and a vibrant, growing community.</p></div></div>
+      <div class="hood-card reveal"><div class="c"><h3>Trussville</h3><p>Friendly, fast-growing, and great for families seeking room to breathe.</p></div></div>
+      <div class="hood-card reveal"><div class="c"><h3>Forest Park & Downtown</h3><p>Historic character and loft living for buyers who love city energy.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TESTIMONIALS ============================ -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Client Stories</span>
+      <h2>The people behind the keys.</h2>
+      <p>Sample testimonials — replace with verified reviews from Google, Zillow, or past clients.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"As first-time buyers we were nervous about everything. Cynthia never made us feel like a dumb question was a dumb question. We closed on our Homewood bungalow under budget."</p>
+        <div class="who"><span class="av"></span><div><b>The Whitfields</b><small>Buyers · Homewood</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We relocated from out of state for a job at UAB and Cynthia was our boots on the ground. She knew every neighborhood and saved us months of guessing."</p>
+        <div class="who"><span class="av"></span><div><b>Marcus & Dana</b><small>Relocation · Vestavia Hills</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Sold our home in nine days for more than we expected. The marketing and photos were a different level than what we'd seen from other agents."</p>
+        <div class="who"><span class="av"></span><div><b>Linda P.</b><small>Seller · Trussville</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND ============================ -->
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Curious what your home is worth today?</h2>
+      <p>Get a free, no-obligation home valuation based on real Birmingham-area sales — not a generic online guess.</p>
+      <div class="hero-ctas">
+        <a class="btn btn--brass" href="#contact">Get My Free Home Value</a>
+        <a class="btn btn--light" href="tel:+12055550142">Call (205) 555-0142</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="alt-bg" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Let's Connect</span>
+      <h2>Reach out — no pressure, just answers.</h2>
+      <p>Tell me a little about what you're hoping to do and I'll follow up personally, usually the same day.</p>
+      <div class="contact-line">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <a href="tel:+12055550142"><b>(205) 555-0142</b><small>Call or text anytime</small></a>
+      </div>
+      <div class="contact-line">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+        <a href="mailto:csheffield32@yahoo.com"><b>csheffield32@yahoo.com</b><small>I reply personally</small></a>
+      </div>
+      <div class="contact-line">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <a><b>[BROKERAGE NAME], REALTORS®</b><small>Birmingham, Alabama</small></a>
+      </div>
+    </div>
+
+    <div class="form reveal">
+      <form id="leadForm" novalidate>
+        <div class="row">
+          <div class="field"><label for="fn">First Name</label><input id="fn" name="fn" type="text" required /></div>
+          <div class="field"><label for="ln">Last Name</label><input id="ln" name="ln" type="text" required /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="em">Email</label><input id="em" name="em" type="email" required /></div>
+          <div class="field"><label for="ph">Phone</label><input id="ph" name="ph" type="tel" /></div>
+        </div>
+        <div class="field">
+          <label for="intent">I'm interested in…</label>
+          <select id="intent" name="intent">
+            <option>Buying a home</option>
+            <option>Selling my home</option>
+            <option>Buying and selling</option>
+            <option>A free home valuation</option>
+            <option>Relocating to Birmingham</option>
+            <option>Just have a question</option>
+          </select>
+        </div>
+        <div class="field"><label for="msg">How can I help?</label><textarea id="msg" name="msg" placeholder="A little about your timeline, budget, or the area you're considering…"></textarea></div>
+        <button type="submit" class="btn btn--solid">Send Message</button>
+        <p class="form-note">By submitting, you agree to be contacted about your inquiry. Your information is never sold or shared.</p>
+      </form>
+      <div class="form-success" id="formSuccess">Thank you! Your message has been sent — Cynthia will reach out shortly.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">Cynthia&nbsp;Sheffield<span>Birmingham Real Estate</span></div>
+        <p style="margin-top:16px;max-width:38ch">Helping buyers and sellers across the Greater Birmingham metro with honesty, local know-how, and genuine care.</p>
+        <div class="eho">
+          <span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(247,242,233,.7)" stroke-width="1.6"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+          <small>Equal Housing Opportunity</small>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#about">About Cynthia</a>
+        <a href="#buy">Buy a Home</a>
+        <a href="#sell">Sell a Home</a>
+        <a href="#listings">Featured Listings</a>
+        <a href="#communities">Communities</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+12055550142">(205) 555-0142</a>
+        <a href="mailto:csheffield32@yahoo.com">csheffield32@yahoo.com</a>
+        <a>[BROKERAGE NAME], REALTORS®</a>
+        <a>Birmingham, AL 35203</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© <span id="yr"></span> Cynthia Sheffield · AL License #[LICENSE NUMBER] · [BROKERAGE NAME], REALTORS®</span>
+      <span>Made with care in Birmingham, Alabama</span>
+    </div>
+    <p class="disclaimer">
+      [COMPLIANCE PLACEHOLDER — verify all language with your broker before publishing.] Cynthia Sheffield is a licensed real estate agent in the State of Alabama affiliated with [BROKERAGE NAME]. Equal Housing Opportunity. All information deemed reliable but not guaranteed and should be independently verified. If IDX/MLS listings are displayed, include your local MLS attribution and disclaimer here (e.g., "Listing data provided courtesy of [MLS NAME]. Information is provided exclusively for consumers' personal, non-commercial use."). This is not a solicitation if your property is currently listed with another broker.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* sticky header */
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30));
+
+/* mobile nav */
+const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>{burger.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('open');navLinks.classList.remove('open');}));
+
+/* scroll reveal */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el);});
+
+/* contact form (demo only — wire to a real handler, see customization notes) */
+document.getElementById('leadForm').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  this.style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+});
+
+/* footer year */
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
